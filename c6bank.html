@@ -39,25 +39,53 @@
         
     </footer>
     <script>
-        const button = document.querySelector(".top-button");
         const header = document.querySelector(".top-site");
-        header.style.background = 'none';
-        button.classList.add('disabled');
+        const button = document.querySelector(".top-button");
+        const body = document.querySelector("body");
+
+        header.style.background = "none";
+        button.classList.add("disabled");
+        // margin-bottom
+        // marginBottom
+        //janela e site
+        //window e document
+
+        //evento chamado scroll. JavaScript é uma linguagem dirigida a eventos
+        //Criamos uma escuta para um evento. 
 
         window.addEventListener('scroll', (e) => {
-            console.log(window.scrollY);
+            console.log(body.clientHeight);//altura total 2000
 
-
-            if (window.scrollY < 100) {
-                header.style.background = 'none';
-                button.classList.add('disabled');
+            if (scrollY < 100) {
+                header.style.background = "none";
+                button.classList.add("disabled");
             } else {
-                header.style.background = '#fff';
-                button.classList.remove('disabled');
+                const logo = header.querySelector(".jss12");
+
+                if (window.scrollY >= (body.clientHeight - 1000)) {
+                    header.style.background = "#000";
+                    logo.style.fill = "#fff";
+                    header.classList.add("footer-link-a");
+                } else {
+                    header.style.background = "#fff";
+                    button.classList.remove("disabled");
+                    logo.style.fill = "#000";
+                    header.classList.remove("footer-link-a");
+                }
             }
         });
 
+//teremos aula sobre funções em JavaScript.
+//A forma mais simples de criar uma função, é uma função de seta.
+// arrow function
+//   const msg = nome_time => alert(nome_time);
+// msg('Corinthians');
+//  (nome_time) => { corpo da função}
+// ()=>{}
+
+
     </script>
+    <script type="text/javascript" src="assets/js/main.js"></script>
 </body>
 
 </html>

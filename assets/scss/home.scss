@@ -9,15 +9,15 @@ header {
         align-items: center;
         background: #fff;
         transition-duration: 0.5s;
-    & > nav {
+        & > nav {
         width: 60%;
         > ul {
             margin: 0;
             display: flex;
-            > li {
+            li {
                 list-style: none;
                 margin-right: 40px;
-                > a {
+                a {
                     text-decoration: none;
                     color: #222;
                     font-weight: bold;
@@ -27,6 +27,9 @@ header {
         }
     }
 
+header.footer-link-a > nav > ul li a {
+    color: #fff;
+}
 ::selection{
     background: #ffe45c;
     color: #242424;
