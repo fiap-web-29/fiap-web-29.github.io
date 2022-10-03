@@ -42,5 +42,14 @@ console.log(data, "retornando dados da API");
 // Eventos de formulário - onFocus, onBlur, onChange
 // Eventos de mídia - onPlay, onPause, onEnded
 // Eventos de rede - onLoad, onError, onAbort
+// quem.addEventListener("evento", função) - quem é o elemento que vai receber o evento.
 
 //funções, arrays, eventos, assíncrono, controle de fluxo (estrutura de controle e loops)
+const  body = document.querySelector("body");
+body.style.width = "100%";
+body.style.height = "100vh";
+
+body.addEventListener("mouseover", (event)=> {
+    body.style.backgroundColor = "#d4d4d4";
+    console.log("executou o evento");
+});

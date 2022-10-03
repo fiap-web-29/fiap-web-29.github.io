@@ -50,3 +50,14 @@ setInterval(relogio, 1000);
 //uma funcao que é armazenada numa variável é chamada de expressão de função
 //uma função q n tem nome, mas tem a palavra function é uma função anônima
 // a função anonima precisa de um contexto
+
+const frases = ["A vida é bela", "A vida é curta", "A vida é uma dádiva"];
+const mudaFrase = (elem, frases, i) => {
+    let total = 0;
+    setInterval(() => {
+      document.querySelector(elem).innerHTML =
+        frases[total >= frases.length - 1 ? (total = 0) : (total += 1)];
+      console.log(total);
+    }, i * 1000);
+  };
+mudaFrase("h1", frases, 4);
